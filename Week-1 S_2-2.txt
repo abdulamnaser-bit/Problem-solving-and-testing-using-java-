@@ -1,0 +1,22 @@
+class Solution {
+    public int[] sortArrayByParity(int[] nums) {
+        int[] result = new int[nums.length];
+        int index = 0;
+
+        // Add even numbers first
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
+                result[index++] = nums[i];
+            }
+        }
+
+        // Add odd numbers next
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 != 0) {
+                result[index++] = nums[i];
+            }
+        }
+
+        return result;
+    }
+}
