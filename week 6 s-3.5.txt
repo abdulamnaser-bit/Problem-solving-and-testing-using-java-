@@ -1,0 +1,12 @@
+public static int marsExploration(String s) {
+    String expected = "SOS";
+    int changedLetters = 0;
+
+    for (int i = 0; i < s.length(); i++) {
+        if (s.charAt(i) != expected.charAt(i % 3)) {
+            changedLetters++;
+        }
+    }
+
+    return changedLetters;
+}	
